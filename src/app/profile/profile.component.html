@@ -1,0 +1,414 @@
+<app-header></app-header>
+<div class="container my-5">
+  <div class="row my-5">
+    <div class="col-1 mt-5">
+      <img
+        height="100"
+        width="100"
+        class="rounded rounded-circle"
+        [src]="
+          imgUpload ? '../../assets/images/Ellipse 82.png' : cropImagePreview
+        "
+        id="profileImg"
+        alt=""
+        srcset=""
+      />
+    </div>
+    <div class="col align-self-end mx-2">
+      <input
+        (change)="onFileChange($event)"
+        class="d-none"
+        type="file"
+        id="profilePic"
+        accept="image/*"
+      />
+      <label
+        for="profilePic"
+        class="upload-img mt-3 btn btn-primary p-2"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        Upload image
+      </label>
+    </div>
+
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Crop Image</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <image-cropper
+              [imageChangedEvent]="imageChangeEvent"
+              [aspectRatio]="4 / 4"
+              [maintainAspectRatio]="true"
+              [resizeToWidth]="256"
+              format="png"
+              (imageCropped)="cropImage($event)"
+              (imageLoaded)="imgLoad()"
+              (cropperReady)="initCropper()"
+              (loadImageFailed)="imgFailed()"
+            >
+            </image-cropper>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              (click)="uploadImage()"
+            >
+              Upload to Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex align-items-start px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+    <div class="col-4 mx-3">
+      <form [formGroup]="profileFullName">
+        <div class="form-outline mb-4">
+          <label
+            class="my-1"
+            style="font-size: 14px; font-weight: 700; letter-spacing: 1px"
+            >Full Name</label
+          >
+          <input
+            style="border-radius: 9px"
+            type="text"
+            id="form2Example18"
+            class="form-control form-control-lg py-2"
+            formControlName="controlFullName"
+            placeholder="Enter your full name"
+          />
+          <span>
+            <small
+              *ngIf="
+                controlFullName &&
+                controlFullName.invalid &&
+                controlFullName.touched
+              "
+              style="color: red"
+              >Your First name is invalid</small
+            >
+          </span>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-4 mx-3">
+      <form [formGroup]="profileEmail">
+        <div class="form-outline mb-4">
+          <label
+            class="my-1"
+            style="font-size: 14px; font-weight: 700; letter-spacing: 1px"
+            >Email</label
+          >
+          <input
+            style="border-radius: 9px"
+            type="email"
+            id="form2Example18"
+            formControlName="controlEmail"
+            class="form-control form-control-lg py-2"
+            placeholder="Enter your full name"
+          />
+          <span>
+            <small
+              *ngIf="
+                controlEmail && controlEmail.invalid && controlEmail.touched
+              "
+              style="color: red"
+              >Your Email is invalid</small
+            >
+          </span>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-4 mx-3">
+      <form [formGroup]="profilePhone">
+        <div class="form-outline mb-4">
+          <label
+            class="my-1"
+            style="font-size: 14px; font-weight: 700; letter-spacing: 1px"
+            >Phone</label
+          >
+          <div class="d-flex flex-row">
+            <button
+              style="border: none"
+              class="dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img src="../../assets/images/Pakistan.png" alt="" />
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+            </ul>
+            <input
+              style="border-radius: 9px"
+              maxlength="11"
+              type="tel"
+              class="form-control py-2"
+              formControlName="controlPhone"
+              aria-label="Text input with dropdown button"
+              placeholder="Enter phone No."
+            />
+          </div>
+          <div>
+            <small
+              *ngIf="
+                controlPhone && controlPhone.invalid && controlPhone.touched
+              "
+              style="color: red"
+              >Your Phone is invalid</small
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="d-flex align-items-start px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+    <div class="col-4 mx-3">
+      <form [formGroup]="profileCode">
+        <div class="form-outline mb-4">
+          <label
+            class="my-1"
+            style="font-size: 14px; font-weight: 700; letter-spacing: 1px"
+            >Post Code</label
+          >
+          <input
+            style="border-radius: 9px"
+            type="number"
+            id="form2Example18"
+            formControlName="controlCode"
+            class="form-control form-control-lg py-2"
+            placeholder="Enter your full name"
+          />
+          <span>
+            <small
+              *ngIf="controlCode && controlCode.invalid && controlCode.touched"
+              style="color: red"
+              >Your Postal Code is invalid</small
+            >
+          </span>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-4 mx-3">
+      <form [formGroup]="profileAddress">
+        <div class="form-outline mb-4">
+          <label
+            class="my-1"
+            style="font-size: 14px; font-weight: 700; letter-spacing: 1px"
+            >Address</label
+          >
+          <input
+            style="border-radius: 9px"
+            type="text"
+            id="form2Example18"
+            formControlName="controlAddress"
+            class="form-control form-control-lg py-2"
+            placeholder="Enter your full name"
+          />
+          <span>
+            <small
+              *ngIf="
+                controlAddress &&
+                controlAddress.invalid &&
+                controlAddress.touched
+              "
+              style="color: red"
+              >Your Address is invalid</small
+            >
+          </span>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-4 mx-3">
+      <form [formGroup]="profileCheckBox">
+        <div class="row form-outline mb-4">
+          <div class="col-7">
+            <label
+              class="my-1"
+              style="font-size: 14px; font-weight: 700; letter-spacing: 1px"
+              >Gender</label
+            >
+            <div class="d-flex justify-content-between">
+              <div class="bg-secondary p-2 px-3" style="border-radius: 10px">
+                <label class="form-check-label mt-1 text-light" for="male"
+                  >Male</label
+                >
+                <input
+                  class="form-check-input m-2"
+                  type="radio"
+                  name="gender"
+                  formControlName="controlBox"
+                  id="male"
+                  value="male"
+                />
+              </div>
+
+              <div class="bg-secondary p-2 px-3" style="border-radius: 10px">
+                <label
+                  class="form-check-label mt-1 female text-light"
+                  for="female"
+                  >Female</label
+                >
+                <input
+                  class="form-check-input m-2"
+                  type="radio"
+                  name="gender"
+                  id="female"
+                  formControlName="controlBox"
+                  value="female"
+                />
+              </div>
+            </div>
+          </div>
+          <span>
+            <small *ngIf="controlBox && controlBox.invalid" style="color: red"
+              >Check is required</small
+            >
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="d-flex align-items-start px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+    <div class="col-4 mx-3">
+      <form>
+        <div class="form-outline mb-4">
+          <label
+            class="my-1"
+            style="font-size: 14px; font-weight: 700; letter-spacing: 1px"
+            >Driving Licence</label
+          >
+          <input
+            style="border-radius: 9px"
+            type="text"
+            id="Driving_Licence"
+            class="form-control form-control-lg py-2"
+          />
+        </div>
+      </form>
+    </div>
+
+    <div class="col-4 mx-3">
+      <form>
+        <div class="form-outline mb-4">
+          <label
+            class="my-1"
+            style="font-size: 14px; font-weight: 700; letter-spacing: 1px"
+            >Car Licence Front Image</label
+          >
+          <div style="background-color: #e9eaea; border-radius: 5px" class="">
+            <img
+              *ngIf="selectedImage1"
+              [src]="selectedImage1"
+              style="height: 200px; width: 400px"
+              id="image1"
+              alt="Uploaded License Front Image"
+              class="img-fluid"
+            />
+            <p
+              *ngIf="!selectedImage1"
+              class="p-5 text-center"
+              style="margin: 0"
+            >
+              upload your licence front image,<br />supported formats
+              jpg,png,;<br />max file size 5mb
+            </p>
+          </div>
+        </div>
+        <div class="col align-self-end">
+          <input
+            class="d-none"
+            type="file"
+            id="frontImage"
+            accept="image/*"
+            (change)="onFileSelected1($event)"
+          />
+          <label for="frontImage" class="upload-img mt-3 btn btn-primary p-2">
+            Upload image
+          </label>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-4 mx-3">
+      <form>
+        <div class="form-outline mb-4">
+          <label
+            class="my-1"
+            style="font-size: 14px; font-weight: 700; letter-spacing: 1px"
+            >Car Licence Back Image</label
+          >
+          <div style="background-color: #e9eaea; border-radius: 5px" class="">
+            <img
+              *ngIf="selectedImage2"
+              [src]="selectedImage2"
+              style="height: 200px; width: 400px"
+              id="image2"
+              alt="Uploaded License back Image"
+              class="img-fluid"
+            />
+            <p
+              *ngIf="!selectedImage2"
+              class="p-5 text-center"
+              style="margin: 0"
+            >
+              upload your licence front image,<br />supported formats
+              jpg,png,;<br />max file size 5mb
+            </p>
+          </div>
+        </div>
+        <div class="col align-self-end">
+          <input
+            class="d-none"
+            type="file"
+            id="backImage"
+            accept="image/*"
+            (change)="onFileSelected2($event)"
+          />
+          <label for="backImage" class="upload-img mt-3 btn btn-primary p-2">
+            Upload image
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

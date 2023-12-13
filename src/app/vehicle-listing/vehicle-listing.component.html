@@ -1,0 +1,964 @@
+<app-header></app-header>
+<section class="">
+  <div class="container-fluid">
+    <div class="row justify-content-start ">
+      <div class="col-3">
+        <form class="form container col-11 py-3">
+          <div class="mt-3">
+            <label
+              style="font-weight: 500"
+              class="py-1"
+              for="validationCustom01"
+              >Make</label
+            >
+            <select class="form-select" aria-label="Default select example">
+              <option selected>select maker</option>
+              <option value="1">Honda</option>
+              <option value="2">Toyota</option>
+              <option value="3">Kia</option>
+            </select>
+
+            <label
+              style="font-weight: 500"
+              for="validationCustom02"
+              class="py-2 mt-3"
+              >Model</label
+            >
+            <select class="form-select" aria-label="Default select example">
+              <option selected>select model</option>
+              <option value="1">2023</option>
+              <option value="2">2022</option>
+              <option value="3">2021</option>
+            </select>
+
+            <label style="font-weight: 500" for="customRange3" class="py-2 mt-3"
+              >Price Range per day(pkr)</label
+            >
+            <div class="row justify-content-between">
+              <div class="col-3">
+                <span>50,000</span>
+              </div>
+              <div class="col-2">
+                <span>500M</span>
+              </div>
+            </div>
+            <input
+              type="range"
+              class="form-range"
+              min="50000"
+              max="500000000"
+              id="customRange3"
+            />
+            <p class="text-muted">
+              Minimum range 50,000 Rs <br />
+              Maximum range 500M Rs
+            </p>
+
+            <label
+              style="font-weight: 500"
+              for="validationCustom03"
+              class="py-2 mt-3"
+              >Registration City</label
+            >
+            <select class="form-select" aria-label="Default select example">
+              <option selected>All</option>
+              <option value="1">Lahore</option>
+              <option value="2">Karachi</option>
+              <option value="3">Islamabad</option>
+            </select>
+
+            <label
+              style="font-weight: 500"
+              class="py-2"
+              for="validationCustom04"
+              class="py-2 mt-3"
+              >Car Document</label
+            >
+            <select class="form-select" aria-label="Default select example">
+              <option selected>All</option>
+              <option value="1">2023</option>
+            </select>
+
+            <label
+              style="font-weight: 500"
+              for="validationCustom05"
+              class="py-2 mt-3"
+              >Transmission</label
+            >
+            <select class="form-select" aria-label="Default select example">
+              <option selected>All</option>
+              <option value="1">Manual</option>
+              <option value="2">Auto</option>
+            </select>
+
+            <label
+              style="font-weight: 500"
+              for="validationCustom04"
+              class="py-2 mt-3"
+              >Condition</label
+            ><br />
+            <button class="btn">New</button>
+            <button class="btn">Used</button>
+            <br />
+            <label for="validationCustom04" class="form-label mt-3">Fuel</label>
+            <br />
+            <button class="btn">Petrol</button>
+            <button class="btn">Disel</button>
+            <button class="btn">LPG</button>
+            <button class="btn">CNG</button>
+            <button class="btn">Electric</button>
+            <button class="btn">Hybrid</button>
+          </div>
+          <!--input-->
+          <button class="btn btn-primary w-100 p-2 mt-3">Apply</button>
+        </form>
+      </div>
+
+
+      <div class="col-8">
+        <div class="row justify-content-start mt-4">
+          <div class="col-4 mt-3">
+            <div class="card" style="width: 20rem">
+              <div class="d-flex flex-row justify-content-between">
+                <div class="container col-8">
+                  <h6 class="mt-3">Swift Suzuki 2023</h6>
+                  <span style="color: #90a3bf">Sports</span>
+                </div>
+                <div class="col-3 mt-3">
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    id="favorite"
+                    name="favorite-checkbox"
+                    value="favorite-button"
+                  />
+                  <label for="favorite" class="container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-heart"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <img
+                src="../../assets/images/car.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <img src="../../assets/images/gas-station.png" alt="..." />
+                <span class="mx-1" style="color: #90a3bf">90L</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/manual.png"
+                  alt="..."
+                /><span style="color: #90a3bf">Manual</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/profile-2user.png"
+                  alt="..."
+                /><span style="color: #90a3bf">4 Peopele</span>
+                <div class="row align-items-center my-3">
+                  <div class="col-5">
+                    <h5 class="card-title">
+                      <span style="font-size: 12px">pkr.</span>4000/<span
+                        style="font-size: 10px; color: #90a3bf"
+                        >day</span
+                      >
+                    </h5>
+                  </div>
+                  <div class="col-7">
+                    <button routerLinkActive="active" routerLink="/vehicle-listing/car" class="btn btn-primary col-10">Rent Car</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 mt-3">
+            <div class="card" style="width: 20rem">
+              <div class="d-flex flex-row justify-content-between">
+                <div class="container col-8">
+                  <h6 class="mt-3">Swift Suzuki 2023</h6>
+                  <span style="color: #90a3bf">Sports</span>
+                </div>
+                <div class="col-3 mt-3">
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    id="favorite"
+                    name="favorite-checkbox"
+                    value="favorite-button"
+                  />
+                  <label for="favorite" class="container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-heart"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <img
+                src="../../assets/images/car.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <img src="../../assets/images/gas-station.png" alt="..." />
+                <span class="mx-1" style="color: #90a3bf">90L</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/manual.png"
+                  alt="..."
+                /><span style="color: #90a3bf">Manual</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/profile-2user.png"
+                  alt="..."
+                /><span style="color: #90a3bf">4 Peopele</span>
+                <div class="row align-items-center my-3">
+                  <div class="col-5">
+                    <h5 class="card-title">
+                      <span style="font-size: 12px">pkr.</span>4000/<span
+                        style="font-size: 10px; color: #90a3bf"
+                        >day</span
+                      >
+                    </h5>
+                  </div>
+                  <div class="col-7">
+                    <a href="#" class="btn btn-primary col-10">Rent Car</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 mt-3">
+            <div class="card" style="width: 20rem">
+              <div class="d-flex flex-row justify-content-between">
+                <div class="container col-8">
+                  <h6 class="mt-3">Swift Suzuki 2023</h6>
+                  <span style="color: #90a3bf">Sports</span>
+                </div>
+                <div class="col-3 mt-3">
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    id="favorite"
+                    name="favorite-checkbox"
+                    value="favorite-button"
+                  />
+                  <label for="favorite" class="container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-heart"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <img
+                src="../../assets/images/car.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <img src="../../assets/images/gas-station.png" alt="..." />
+                <span class="mx-1" style="color: #90a3bf">90L</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/manual.png"
+                  alt="..."
+                /><span style="color: #90a3bf">Manual</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/profile-2user.png"
+                  alt="..."
+                /><span style="color: #90a3bf">4 Peopele</span>
+                <div class="row align-items-center my-3">
+                  <div class="col-5">
+                    <h5 class="card-title">
+                      <span style="font-size: 12px">pkr.</span>4000/<span
+                        style="font-size: 10px; color: #90a3bf"
+                        >day</span
+                      >
+                    </h5>
+                  </div>
+                  <div class="col-7">
+                    <a href="#" class="btn btn-primary col-10">Rent Car</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-4 mt-3">
+            <div class="card" style="width: 20rem">
+              <div class="d-flex flex-row justify-content-between">
+                <div class="container col-8">
+                  <h6 class="mt-3">Swift Suzuki 2023</h6>
+                  <span style="color: #90a3bf">Sports</span>
+                </div>
+                <div class="col-3 mt-3">
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    id="favorite"
+                    name="favorite-checkbox"
+                    value="favorite-button"
+                  />
+                  <label for="favorite" class="container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-heart"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <img
+                src="../../assets/images/car.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <img src="../../assets/images/gas-station.png" alt="..." />
+                <span class="mx-1" style="color: #90a3bf">90L</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/manual.png"
+                  alt="..."
+                /><span style="color: #90a3bf">Manual</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/profile-2user.png"
+                  alt="..."
+                /><span style="color: #90a3bf">4 Peopele</span>
+                <div class="row align-items-center my-3">
+                  <div class="col-5">
+                    <h5 class="card-title">
+                      <span style="font-size: 12px">pkr.</span>4000/<span
+                        style="font-size: 10px; color: #90a3bf"
+                        >day</span
+                      >
+                    </h5>
+                  </div>
+                  <div class="col-7">
+                    <a href="#" class="btn btn-primary col-10">Rent Car</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 mt-3">
+            <div class="card" style="width: 20rem">
+              <div class="d-flex flex-row justify-content-between">
+                <div class="container col-8">
+                  <h6 class="mt-3">Swift Suzuki 2023</h6>
+                  <span style="color: #90a3bf">Sports</span>
+                </div>
+                <div class="col-3 mt-3">
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    id="favorite"
+                    name="favorite-checkbox"
+                    value="favorite-button"
+                  />
+                  <label for="favorite" class="container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-heart"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <img
+                src="../../assets/images/car.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <img src="../../assets/images/gas-station.png" alt="..." />
+                <span class="mx-1" style="color: #90a3bf">90L</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/manual.png"
+                  alt="..."
+                /><span style="color: #90a3bf">Manual</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/profile-2user.png"
+                  alt="..."
+                /><span style="color: #90a3bf">4 Peopele</span>
+                <div class="row align-items-center my-3">
+                  <div class="col-5">
+                    <h5 class="card-title">
+                      <span style="font-size: 12px">pkr.</span>4000/<span
+                        style="font-size: 10px; color: #90a3bf"
+                        >day</span
+                      >
+                    </h5>
+                  </div>
+                  <div class="col-7">
+                    <a href="#" class="btn btn-primary col-10">Rent Car</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 mt-3">
+            <div class="card" style="width: 20rem">
+              <div class="d-flex flex-row justify-content-between">
+                <div class="container col-8">
+                  <h6 class="mt-3">Swift Suzuki 2023</h6>
+                  <span style="color: #90a3bf">Sports</span>
+                </div>
+                <div class="col-3 mt-3">
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    id="favorite"
+                    name="favorite-checkbox"
+                    value="favorite-button"
+                  />
+                  <label for="favorite" class="container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-heart"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <img
+                src="../../assets/images/car.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <img src="../../assets/images/gas-station.png" alt="..." />
+                <span class="mx-1" style="color: #90a3bf">90L</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/manual.png"
+                  alt="..."
+                /><span style="color: #90a3bf">Manual</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/profile-2user.png"
+                  alt="..."
+                /><span style="color: #90a3bf">4 Peopele</span>
+                <div class="row align-items-center my-3">
+                  <div class="col-5">
+                    <h5 class="card-title">
+                      <span style="font-size: 12px">pkr.</span>4000/<span
+                        style="font-size: 10px; color: #90a3bf"
+                        >day</span
+                      >
+                    </h5>
+                  </div>
+                  <div class="col-7">
+                    <button routerLink="/vehicle_listing" class="btn btn-primary col-10">Rent Car</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 mt-3">
+            <div class="card" style="width: 20rem">
+              <div class="d-flex flex-row justify-content-between">
+                <div class="container col-8">
+                  <h6 class="mt-3">Swift Suzuki 2023</h6>
+                  <span style="color: #90a3bf">Sports</span>
+                </div>
+                <div class="col-3 mt-3">
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    id="favorite"
+                    name="favorite-checkbox"
+                    value="favorite-button"
+                  />
+                  <label for="favorite" class="container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-heart"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <img
+                src="../../assets/images/car.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <img src="../../assets/images/gas-station.png" alt="..." />
+                <span class="mx-1" style="color: #90a3bf">90L</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/manual.png"
+                  alt="..."
+                /><span style="color: #90a3bf">Manual</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/profile-2user.png"
+                  alt="..."
+                /><span style="color: #90a3bf">4 Peopele</span>
+                <div class="row align-items-center my-3">
+                  <div class="col-5">
+                    <h5 class="card-title">
+                      <span style="font-size: 12px">pkr.</span>4000/<span
+                        style="font-size: 10px; color: #90a3bf"
+                        >day</span
+                      >
+                    </h5>
+                  </div>
+                  <div class="col-7">
+                    <a href="#" class="btn btn-primary col-10">Rent Car</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 mt-3">
+            <div class="card" style="width: 20rem">
+              <div class="d-flex flex-row justify-content-between">
+                <div class="container col-8">
+                  <h6 class="mt-3">Swift Suzuki 2023</h6>
+                  <span style="color: #90a3bf">Sports</span>
+                </div>
+                <div class="col-3 mt-3">
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    id="favorite"
+                    name="favorite-checkbox"
+                    value="favorite-button"
+                  />
+                  <label for="favorite" class="container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-heart"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <img
+                src="../../assets/images/car.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <img src="../../assets/images/gas-station.png" alt="..." />
+                <span class="mx-1" style="color: #90a3bf">90L</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/manual.png"
+                  alt="..."
+                /><span style="color: #90a3bf">Manual</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/profile-2user.png"
+                  alt="..."
+                /><span style="color: #90a3bf">4 Peopele</span>
+                <div class="row align-items-center my-3">
+                  <div class="col-5">
+                    <h5 class="card-title">
+                      <span style="font-size: 12px">pkr.</span>4000/<span
+                        style="font-size: 10px; color: #90a3bf"
+                        >day</span
+                      >
+                    </h5>
+                  </div>
+                  <div class="col-7">
+                    <a href="#" class="btn btn-primary col-10">Rent Car</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><div class="col-4 mt-3">
+            <div class="card" style="width: 20rem">
+              <div class="d-flex flex-row justify-content-between">
+                <div class="container col-8">
+                  <h6 class="mt-3">Swift Suzuki 2023</h6>
+                  <span style="color: #90a3bf">Sports</span>
+                </div>
+                <div class="col-3 mt-3">
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    id="favorite"
+                    name="favorite-checkbox"
+                    value="favorite-button"
+                  />
+                  <label for="favorite" class="container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-heart"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <img
+                src="../../assets/images/car.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <img src="../../assets/images/gas-station.png" alt="..." />
+                <span class="mx-1" style="color: #90a3bf">90L</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/manual.png"
+                  alt="..."
+                /><span style="color: #90a3bf">Manual</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/profile-2user.png"
+                  alt="..."
+                /><span style="color: #90a3bf">4 Peopele</span>
+                <div class="row align-items-center my-3">
+                  <div class="col-5">
+                    <h5 class="card-title">
+                      <span style="font-size: 12px">pkr.</span>4000/<span
+                        style="font-size: 10px; color: #90a3bf"
+                        >day</span
+                      >
+                    </h5>
+                  </div>
+                  <div class="col-7">
+                    <a href="#" class="btn btn-primary col-10">Rent Car</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 mt-3">
+            <div class="card" style="width: 20rem">
+              <div class="d-flex flex-row justify-content-between">
+                <div class="container col-8">
+                  <h6 class="mt-3">Swift Suzuki 2023</h6>
+                  <span style="color: #90a3bf">Sports</span>
+                </div>
+                <div class="col-3 mt-3">
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    id="favorite"
+                    name="favorite-checkbox"
+                    value="favorite-button"
+                  />
+                  <label for="favorite" class="container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-heart"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <img
+                src="../../assets/images/car.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <img src="../../assets/images/gas-station.png" alt="..." />
+                <span class="mx-1" style="color: #90a3bf">90L</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/manual.png"
+                  alt="..."
+                /><span style="color: #90a3bf">Manual</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/profile-2user.png"
+                  alt="..."
+                /><span style="color: #90a3bf">4 Peopele</span>
+                <div class="row align-items-center my-3">
+                  <div class="col-5">
+                    <h5 class="card-title">
+                      <span style="font-size: 12px">pkr.</span>4000/<span
+                        style="font-size: 10px; color: #90a3bf"
+                        >day</span
+                      >
+                    </h5>
+                  </div>
+                  <div class="col-7">
+                    <a href="#" class="btn btn-primary col-10">Rent Car</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 mt-3">
+            <div class="card" style="width: 20rem">
+              <div class="d-flex flex-row justify-content-between">
+                <div class="container col-8">
+                  <h6 class="mt-3">Swift Suzuki 2023</h6>
+                  <span style="color: #90a3bf">Sports</span>
+                </div>
+                <div class="col-3 mt-3">
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    id="favorite"
+                    name="favorite-checkbox"
+                    value="favorite-button"
+                  />
+                  <label for="favorite" class="container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-heart"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <img
+                src="../../assets/images/car.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <img src="../../assets/images/gas-station.png" alt="..." />
+                <span class="mx-1" style="color: #90a3bf">90L</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/manual.png"
+                  alt="..."
+                /><span style="color: #90a3bf">Manual</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/profile-2user.png"
+                  alt="..."
+                /><span style="color: #90a3bf">4 Peopele</span>
+                <div class="row align-items-center my-3">
+                  <div class="col-5">
+                    <h5 class="card-title">
+                      <span style="font-size: 12px">pkr.</span>4000/<span
+                        style="font-size: 10px; color: #90a3bf"
+                        >day</span
+                      >
+                    </h5>
+                  </div>
+                  <div class="col-7">
+                    <a href="#" class="btn btn-primary col-10">Rent Car</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 mt-3">
+            <div class="card" style="width: 20rem">
+              <div class="d-flex flex-row justify-content-between">
+                <div class="container col-8">
+                  <h6 class="mt-3">Swift Suzuki 2023</h6>
+                  <span style="color: #90a3bf">Sports</span>
+                </div>
+                <div class="col-3 mt-3">
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    id="favorite"
+                    name="favorite-checkbox"
+                    value="favorite-button"
+                  />
+                  <label for="favorite" class="container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-heart"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <img
+                src="../../assets/images/car.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <img src="../../assets/images/gas-station.png" alt="..." />
+                <span class="mx-1" style="color: #90a3bf">90L</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/manual.png"
+                  alt="..."
+                /><span style="color: #90a3bf">Manual</span>
+                <img
+                  class="mx-2"
+                  src="../../assets/images/profile-2user.png"
+                  alt="..."
+                /><span style="color: #90a3bf">4 Peopele</span>
+                <div class="row align-items-center my-3">
+                  <div class="col-5">
+                    <h5 class="card-title">
+                      <span style="font-size: 12px">pkr.</span>4000/<span
+                        style="font-size: 10px; color: #90a3bf"
+                        >day</span
+                      >
+                    </h5>
+                  </div>
+                  <div class="col-7">
+                    <a href="#" class="btn btn-primary col-10">Rent Car</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <app-footer></app-footer>
+
+<router-outlet></router-outlet>

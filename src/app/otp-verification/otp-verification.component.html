@@ -1,0 +1,113 @@
+<section class="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 px-0 d-none d-sm-block">
+        <img
+          src="../../assets/images/Cover.png"
+          alt="Login image"
+          class="w-100% h-100%"
+          style="object-fit: cover; object-position: left"
+        />
+      </div>
+      <div class="col-sm-6 text-black mt-5">
+        <div class="d-flex justify-content-center mt-4 py-5 ms-xl-4">
+          <img width="173px" src="../assets/images/Group.png" />
+        </div>
+        <div class="ms-xl-4">
+          <h2 class="text-center">OTP Verification</h2>
+          <p class="text-center" style="color: #64748b">
+            Please enter the OTP code we have send to your Registered email
+          </p>
+        </div>
+        <div
+          class="d-flex align-items-center px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5"
+        >
+          <form [formGroup]="otpForm" class="container col-lg-10">
+            <div class="form-outline mb-4">
+              <div class="otp-field mb-4">
+                <input
+                  #input1
+                  formControlName="controlOTP"
+                  placeholder="5"
+                  type="number"
+                  [maxLength]="1"
+                  (input)="focusNext(input2)"
+                  maxlength="1"
+                />
+                <input
+                  #input2
+                  formControlName="controlOTP"
+                  placeholder="5"
+                  type="number"
+                  (input)="focusNext(input3)"
+                  maxlength="1"
+                />
+                <input
+                  #input3
+                  formControlName="controlOTP"
+                  placeholder="5"
+                  type="number"
+                  (input)="focusNext(input4)"
+                  maxlength="1"
+                />
+                <input
+                  #input4
+                  formControlName="controlOTP"
+                  placeholder="5"
+                  type="number"
+                  (input)="focusNext(input5)"
+                  maxlength="1"
+                />
+                <input
+                  #input5
+                  formControlName="controlOTP"
+                  placeholder="5"
+                  type="number"
+                  (input)="focusNext(input6)"
+                  maxlength="1"
+                />
+                <input
+                  #input6
+                  formControlName="controlOTPlast"
+                  placeholder="5"
+                  type="number"
+                  maxlength="1"
+                />
+              </div>
+            </div>
+            <div class="text-center">
+              <span>
+                <small  *ngIf="controlOTP && controlOTPlast && controlOTP.invalid && controlOTPlast.invalid" style="color: red"
+                  >OTP required
+                </small>
+              </span>
+            </div>
+            <p style="font-weight: bold" class="text-center">0:{{ time }}</p>
+            <div class="d-flex justify-content-center pt-1 mb-3">
+              <button
+                routerLink="/login"
+                routerLinkActive="router-link-active"
+                class="btn btn-primary btn-lg text-center col-11"
+                type="button"
+                [disabled]="otpForm.invalid"
+              >
+                Confirm
+              </button>
+            </div>
+            <div class="d-flex justify-content-center pt-1 mb-3">
+              <button
+              [disabled]="time === 0 ? false : true"
+                class="btn btn-light btn-lg text-center col-11"
+                type="button"
+              >
+                Resend
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<router-outlet></router-outlet>
